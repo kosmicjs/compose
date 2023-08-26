@@ -1,0 +1,13 @@
+{
+  "prettier": true,
+  "parserOptions": {
+    "project": "./tsconfig.xo.json"
+  },
+  "rules": {
+    "@typescript-eslint/naming-convention": "off",
+    "@typescript-eslint/consistent-type-definitions": "off",
+    "unicorn/prevent-abbreviations": "off",
+    "unicorn/prefer-module": "off",
+    "capitalized-comments": "off"
+  }
+}

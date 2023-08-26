@@ -1,0 +1,102 @@
+{
+  "name": "@kosmic/middleware-template",
+  "version": "0.0.0",
+  "description": "A template repo for @kosmic/koa middleware - should also work fine for use with koa",
+  "keywords": [
+    "koa",
+    "typescript",
+    "koajs",
+    "kosmic",
+    "@kosmic",
+    "@kosmic/koa",
+    "framework",
+    "server",
+    "http",
+    "node",
+    "node.js"
+  ],
+  "homepage": "https://github.com/kosmicjs/koa#readme",
+  "bugs": {
+    "url": "https://github.com/kosmicjs/koa/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kosmicjs/koa.git"
+  },
+  "license": "MIT",
+  "author": "Spencer Snyder <sasnyde2@gmail.com> (https://spencersnyder.io/)",
+  "type": "commonjs",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/esm/application.d.mts",
+        "default": "./dist/esm/application.mjs"
+      },
+      "require": {
+        "types": "./dist/application.d.ts",
+        "default": "./dist/application.js"
+      }
+    },
+    "./compose": {
+      "import": {
+        "types": "./dist/esm/compose.d.mts",
+        "default": "./dist/esm/compose.mjs"
+      },
+      "require": {
+        "types": "./dist/compose.d.ts",
+        "default": "./dist/compose.js"
+      }
+    }
+  },
+  "main": "./dist/application.js",
+  "types": "./dist/application.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "npm run clean && npm run compile",
+    "clean": "rimraf -rf ./dist",
+    "compile": "duel",
+    "dev": "npm build --watch",
+    "prepublishOnly": "npm run build",
+    "test": "npm run build && jest --forceExit",
+    "watch": "npm run clean && tsc --watch"
+  },
+  "prettier": {
+    "plugins": [
+      "prettier-plugin-packagejson"
+    ]
+  },
+  "ava": {
+    "extensions": [
+      "ts"
+    ],
+    "files": [
+      "test/**/*.ts",
+      "!test/fixtures/**/*"
+    ],
+    "require": [
+      "ts-node/register"
+    ],
+    "verbose": true
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@commitlint/cli": "^17.7.1",
+    "@commitlint/config-conventional": "^17.7.0",
+    "@knighted/duel": "^1.0.0-rc.11",
+    "@types/node": "~20.5.1",
+    "ava": "^5.3.1",
+    "husky": "^8.0.3",
+    "koa": "file:../koa",
+    "lint-staged": "^14.0.0",
+    "npm-package-json-lint": "^7.0.0",
+    "npm-package-json-lint-config-default": "^6.0.0",
+    "prettier-plugin-packagejson": "^2.4.5",
+    "rimraf": "^5.0.1",
+    "ts-node": "^10.9.1",
+    "type-fest": "^4.2.0",
+    "typescript": "~5.1.6",
+    "xo": "^0.56.0"
+  }
+}
