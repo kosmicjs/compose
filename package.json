@@ -1,10 +1,12 @@
 {
-  "name": "@kosmic/middleware-template",
+  "name": "@kosmic/compose",
   "version": "0.0.0",
-  "description": "A template repo for @kosmic/koa middleware - should also work fine for use with koa",
+  "description": "Compose middleware for @kosmic/koa",
   "keywords": [
     "koa",
     "typescript",
+    "compose",
+    "koa-compose",
     "koajs",
     "kosmic",
     "@kosmic",
@@ -15,13 +17,13 @@
     "node",
     "node.js"
   ],
-  "homepage": "https://github.com/kosmicjs/koa#readme",
+  "homepage": "https://github.com/kosmicjs/compose#readme",
   "bugs": {
-    "url": "https://github.com/kosmicjs/koa/issues"
+    "url": "https://github.com/kosmicjs/compose/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kosmicjs/koa.git"
+    "url": "git+https://github.com/kosmicjs/compose.git"
   },
   "license": "MIT",
   "author": "Spencer Snyder <sasnyde2@gmail.com> (https://spencersnyder.io/)",

@@ -1,27 +1,6 @@
 /* eslint-disable @typescript-eslint/promise-function-async */
 /* eslint-disable @typescript-eslint/no-floating-promises */
-import {type Context} from 'koa';
-
-export type Next = () => Promise<unknown>;
-
-/**
- * Composeable middleware.
- *
- * @param context - The Koa extended context object
- * @param next - The next function to be call the next next middleware in the middleware chain.
- */
-export type Middleware<C = Context> = (
-  /**
-   * The Koa extended context object
-   */
-  context: C,
-  /**
-   * The next function to be call the next next middleware in the middleware chain.
-   * Always returns a promise and allows for fine grained middleware control flow.
-   *
-   */
-  next: Next,
-) => Promise<unknown>;
+import {type Context, type Next, type Middleware} from 'koa';
 
 /**
  * Expose compositor
@@ -59,5 +38,3 @@ function compose(middleware: Middleware[]) {
 }
 
 export default compose;
-module.exports.default = compose;
-module.exports = compose;
