@@ -29,22 +29,12 @@
   "exports": {
     ".": {
       "import": {
-        "types": "./dist/esm/application.d.mts",
-        "default": "./dist/esm/application.mjs"
+        "types": "./dist/esm/index.d.mts",
+        "default": "./dist/esm/index.mjs"
       },
       "require": {
-        "types": "./dist/application.d.ts",
-        "default": "./dist/application.js"
-      }
-    },
-    "./compose": {
-      "import": {
-        "types": "./dist/esm/compose.d.mts",
-        "default": "./dist/esm/compose.mjs"
-      },
-      "require": {
-        "types": "./dist/compose.d.ts",
-        "default": "./dist/compose.js"
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
       }
     }
   },
@@ -58,6 +48,7 @@
     "clean": "rimraf -rf ./dist",
     "compile": "duel",
     "dev": "npm build --watch",
+    "prepare": "husky install",
     "prepublishOnly": "npm run build",
     "test": "npm run build && jest --forceExit",
     "watch": "npm run clean && tsc --watch"
