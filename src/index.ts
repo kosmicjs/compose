@@ -37,4 +37,4 @@ function compose(middleware: Middleware[]) {
   };
 }
 
-export default compose;
+export = compose;
