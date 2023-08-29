@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/promise-function-async */
 /* eslint-disable @typescript-eslint/no-floating-promises */
-import {type Context, type Next, type Middleware} from 'koa';
+import {type Context, type Next, type Middleware} from '@kosmic/koa';
 
 /**
  * Expose compositor
