@@ -4,6 +4,7 @@
     "target": "ES2022",
     "module": "Node16",
     "rootDir": "./src",
+    "skipLibCheck": true,
     "strict": true,
     "declaration": true,
     "sourceMap": true
